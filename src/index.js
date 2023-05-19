@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { routes as r } from './config/routes'
 import { Soi } from './components/test/Soi';
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Dashboard } from './Dashboard';
 
 
 
@@ -16,14 +17,14 @@ const root = createRoot(container);
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Navigate to={r.dashboard.slug} replace />,
-    },
-    {
-        path: r.dashboard.uri,
         element: <App />,
         children: [
             {
-                path: r.simulation.children[0].slug,
+                path: r.home.slug,
+                element: <Dashboard />,
+            },
+            {
+                path: r.test.slug,
                 element: <Soi />,
             }
         ]

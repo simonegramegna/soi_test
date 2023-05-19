@@ -28,7 +28,7 @@ export const NavMobile = () => {
         <div className={'mobile-menu md:hidden ' + openMenu}>
             <div className="mobile-menu-bar">
                 <Link to="/" className="flex mr-auto">
-                    <img alt="logo" src="/images/logo_mobile_w.svg" className="w-52" />
+                    <img alt="logo" src="/images/logo-mobile.svg" className="w-52" />
                 </Link>
                 <button type="button" id="mobile-menu-toggler" onClick={toggleMenu}>
                     <Icon.BarChart2 className="w-8 h-8 text-white transform -rotate-90" />

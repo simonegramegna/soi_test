@@ -16,7 +16,7 @@ export const NavDesktop = () => {
     return (
         <nav className="side-nav">
             <NavLink to="/" className="intro-x flex items-center pl-5 pt-4">
-                <img alt="logo" src="/images/logo_w.svg" />
+                <img alt="logo" src="/images/logo.svg" />
             </NavLink>
             <div className="side-nav__devider my-6"></div>
             <Nav classes={classes} />

@@ -1,23 +1,23 @@
 const routes = {
-    dashboard: {
-        label: 'Dashboard',
-        uri: '/dashboard',
-        slug: 'dashboard',
+    home: {
+        label: 'Home',
+        uri: '/',
+        slug: '',
         children: []
     },
-    simulation: {
-        label: 'Simulation',
-        uri: '#',
-        slug: '#',
+    test: {
+        label: 'SOI Test',
+        uri: '/soi-test',
+        slug: 'soi-test',
         children: [
         {
             label: 'Petri Net Editor',
-            uri: '/dashboard/editor',
+            uri: '/soi-test/editor',
             slug: 'editor',
         },
         {
             label: 'Token Game',
-            uri: '/dashboard/token-game',
+            uri: '/soi-test/token-game',
             slug: 'token-game'
         }
     ]}

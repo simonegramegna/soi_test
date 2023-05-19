@@ -24,24 +24,24 @@ export const Nav = ({classes, mobileCss}) => {
     return (
         <ul className={mobileCss ? 'border-t border-theme-29 py-5 ' + mobileCss : ''}>
             <li>
-                <NavLink to={r.dashboard.uri} className={location.pathname === r.dashboard.uri ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
+                <NavLink to={r.home.uri} className={location.pathname === r.home.uri ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
                     <div className={classes.icon}> <Icon.Home /> </div>
-                    <div className={classes.title}>{r.dashboard.label}</div>
+                    <div className={classes.title}>{r.home.label}</div>
                 </NavLink>
             </li>
             <li>
-                <NavLink to={r.simulation.uri} className={r.simulation.children.map(u => u.uri).includes(location.pathname) ? classes.a + ' ' + classes.active : classes.a} onClick={(e) => toggleMenu(e)}>
+                <NavLink to={r.test.uri} className={r.test.children.map(u => u.uri).includes(location.pathname) ? classes.a + ' ' + classes.active : classes.a} onClick={(e) => toggleMenu(e)}>
                     <div className={classes.icon}> <Icon.GitPullRequest /> </div>
                     <div className={classes.title}>
-                        { r.simulation.label }
+                        { r.test.label }
                         <div className={classes.subIcon}> <Icon.ChevronDown /> </div>
                     </div>
                 </NavLink>
                 <ul>
                     <li>
-                        <NavLink to={r.simulation.children[0].uri} className={({ isActive }) => isActive ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
+                        <NavLink to={r.test.children[0].uri} className={({ isActive }) => isActive ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
                             <div className={classes.icon}> <Icon.ChevronRight /> </div>
-                            <div className={classes.title}> {r.simulation.children[0].label} </div>
+                            <div className={classes.title}> {r.test.children[0].label} </div>
                         </NavLink>
                     </li>
                 </ul>
