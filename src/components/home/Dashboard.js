@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, GitHub, ChevronRight, AlertTriangle } from 'react-feather'
+import { routes as r } from '../../config/routes'
 
 export const Dashboard = () => {
 
@@ -23,7 +24,7 @@ export const Dashboard = () => {
                                 <p className='mb-2'>Traditionally intelligence tests have defined intelli­gence in terms of test performance relative to the performance of others who have taken the tests. This traditional approach (where intelligence test scores are predicated on population norms) usually results in a single index expressed in terms of numbers. Too often the single score has been used to classify children in ways that may be detrimental to them as persons and misleading to those who are responsible for their formal education. In addition, there can be no real guarantee that the sample populations tested were in fact representative of all types of children and their varying situations.</p>
                                 <p className='mb-2'>The S.0.I. approach represents an alternative. This alternative recognizes the fact that children must have developed certain intellectual abilities in order to learn. As an alternative approach to testing, it does not ask "how much," it asks, instead, "what kind". The S.0.I. approach is based on <strong>Guilford's Theory of Intelligence</strong> and measures many separate intellectual abilities in terms of individual strengths and weaknesses, not just general intelligence. According to Guilford, intelligence is a combination of multiple intellectual abilities rather than just one attribute. SOI theory comprises different components of intelligence arranged along three dimensions, which are <strong>operation, content, and products</strong>.</p>
                                 <p className='mb-2'>The test results, shown in a profile for each student referenced to his or her own overall performance on the test, aim to define appropriate teaching procedures and individualized curriculum. If students are achieving at grade level then we must know, first, whether the prerequisite intellectual abilities will support higher achievement. If students are achiev­ing beyond expected grade levels, we must also know what abilities make them superior so that these abilities can be further em­phasized.</p>
-                                <Link to={'/soi-test'} className='btn btn-lg btn-primary w-full my-4'>Start the test!</Link>
+                                <Link to={r.test.uri} className='btn btn-lg btn-primary w-full my-4'>Let's start the test!</Link>
                             </div>
                         </div>
                         <div className='col-span-12 lg:col-span-6'>
@@ -47,7 +48,7 @@ export const Dashboard = () => {
                         <div className="flex items-start px-5 mb-3">
                             <div className="w-full flex flex-col lg:flex-row items-center">
                                 <div className="w-16 h-16 image-fit">
-                                    <img alt="Alberto G. Valerio" className="rounded-full" src="https://albertovalerio.com/img/alberto-valerio-freelance-web-developer-quote.jpg" />
+                                    <img alt="Alberto G. Valerio" className="rounded-full" src="/images/alberto-valerio.jpg" />
                                 </div>
                                 <div className="lg:ml-2 lg:mr-auto text-center lg:text-left mt-3 lg:mt-0">
                                     <span className="font-medium">Alberto G. Valerio</span> 
@@ -62,7 +63,7 @@ export const Dashboard = () => {
                         <div className="flex items-start px-5 mt-5">
                             <div className="w-full flex flex-col lg:flex-row items-center">
                                 <div className="w-16 h-16 image-fit">
-                                    <img alt="Simone Gramegna" className="rounded-full" src="https://avatars.githubusercontent.com/u/27293278?v=4" />
+                                    <img alt="Simone Gramegna" className="rounded-full" src="/images/simone-gramegna.jpeg" />
                                 </div>
                                 <div className="lg:ml-2 lg:mr-auto text-center lg:text-left mt-3 lg:mt-0">
                                     <span className="font-medium">Simone Gramegna</span> 

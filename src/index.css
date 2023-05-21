@@ -2275,6 +2275,10 @@ select{
   -o-object-fit: cover;
      object-fit: cover;
 }
+.object-contain {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
 .input-group{
   display: flex;
 }
@@ -2343,7 +2347,11 @@ select{
     transition: visibility 0s ease-in-out 0s, opacity 0.4s ease-in-out 0s;
     visibility: visible;
     opacity: 1;
-  }
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    z-index: 10000;
+}
 .modal.show > .modal-dialog{
   margin-top: 4rem;
 }
@@ -2832,6 +2840,9 @@ grid-column: span 9 / span 9;
 }
 .col-span-5{
   grid-column: span 5 / span 5;
+}
+.col-span-1{
+  grid-column: span 1 / span 1;
 }
 .col-span-2{
   grid-column: span 2 / span 2;
@@ -17678,6 +17689,10 @@ html body{
 .before\:pt-\[100\%\]::before{
   content: var(--tw-content);
   padding-top: 100%;
+}
+.before\:pt-\[50\%\]::before{
+  content: var(--tw-content);
+  padding-top: 50%;
 }
 .before\:content-\[\'\'\]::before{
   --tw-content: '';

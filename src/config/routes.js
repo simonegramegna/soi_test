@@ -6,21 +6,11 @@ const routes = {
         children: []
     },
     test: {
-        label: 'SOI Test',
-        uri: '/soi-test',
-        slug: 'soi-test',
-        children: [
-        {
-            label: 'Petri Net Editor',
-            uri: '/soi-test/editor',
-            slug: 'editor',
-        },
-        {
-            label: 'Token Game',
-            uri: '/soi-test/token-game',
-            slug: 'token-game'
-        }
-    ]}
+        label: 'Let\'s start the test',
+        uri: '/start-test',
+        slug: 'start-test',
+        children: []
+    }
 }
 
 const getRouteLabel = uri => {

@@ -6,9 +6,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { routes as r } from './config/routes'
-import { Soi } from './components/test/Soi';
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { Dashboard } from './Dashboard';
+import { SoiTestContainer } from './components/tests/SoiTestContainer';
+import { Dashboard } from './components/home/Dashboard';
 
 
 
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
             },
             {
                 path: r.test.slug,
-                element: <Soi />,
+                element: <SoiTestContainer />,
             }
         ]
     }

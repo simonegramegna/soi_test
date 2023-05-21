@@ -12,15 +12,6 @@ export const Nav = ({classes, mobileCss}) => {
     const location = useLocation()
     const dispatch = useDispatch()
 
-    const toggleMenu = (e) => {
-        const el = e.target.closest('a')
-        if (el.className.includes(classes.supOpen)) {
-            el.classList.remove(classes.supOpen)
-        } else {
-            el.classList.add(classes.supOpen)
-        }
-    }
-
     return (
         <ul className={mobileCss ? 'border-t border-theme-29 py-5 ' + mobileCss : ''}>
             <li>
@@ -30,21 +21,10 @@ export const Nav = ({classes, mobileCss}) => {
                 </NavLink>
             </li>
             <li>
-                <NavLink to={r.test.uri} className={r.test.children.map(u => u.uri).includes(location.pathname) ? classes.a + ' ' + classes.active : classes.a} onClick={(e) => toggleMenu(e)}>
-                    <div className={classes.icon}> <Icon.GitPullRequest /> </div>
-                    <div className={classes.title}>
-                        { r.test.label }
-                        <div className={classes.subIcon}> <Icon.ChevronDown /> </div>
-                    </div>
+                <NavLink to={r.test.uri} className={location.pathname === r.test.uri ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
+                    <div className={classes.icon}> <Icon.Navigation /> </div>
+                    <div className={classes.title}>{r.test.label}</div>
                 </NavLink>
-                <ul>
-                    <li>
-                        <NavLink to={r.test.children[0].uri} className={({ isActive }) => isActive ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
-                            <div className={classes.icon}> <Icon.ChevronRight /> </div>
-                            <div className={classes.title}> {r.test.children[0].label} </div>
-                        </NavLink>
-                    </li>
-                </ul>
             </li>
         </ul>
     )
