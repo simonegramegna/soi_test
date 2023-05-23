@@ -16,3 +16,11 @@ correct_answer(cfu_13, 'pumpkin').
 
 % module CFC
 correct_answer(cfc_1, '7').
+correct_answer(cfc_2, '4').
+correct_answer(cfc_2, '5').
+correct_answer(cfc_3, '4').
+correct_answer(cfc_4, '3').
+correct_answer(cfc_5, '8').
+correct_answer(cfc_6, '2').
+correct_answer(cfc_7, '1').
+correct_answer(cfc_8, '6').
