@@ -1,4 +1,5 @@
 :- module(weights, [weights/3]).
+:- ['weights.pl'].
 
 % Weights for adjusting scores
 weights(dfu_f, 2, 6).

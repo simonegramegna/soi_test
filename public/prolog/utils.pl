@@ -1,3 +1,6 @@
+:- use_module(answers, [ correct_answer/3 ]).
+:- use_module(weights, [ weights/3 ]).
+
 get_score([], _, _, 0).
 get_score([H|B], Test, Question, Score) :-
     correct_answer(Test, Question, H),

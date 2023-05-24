@@ -1,3 +1,7 @@
+:- module(answers, [correct_answer/3]).
+:- ['answers.pl'].
+
+
 % module CFU
 correct_answer(cfu, 1, 'dog').
 correct_answer(cfu, 1, 'pup').
