@@ -1,3 +1,6 @@
+:- module(kb_soi_abilities, [weights/3]).
+
+
 % SOI abilities
 ability(cognition,      [cfu, cfc, cft, cmr, cms]).
 ability(memory,         [msu, mss, mfu]).

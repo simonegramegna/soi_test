@@ -1,5 +1,4 @@
-:- module(answers, [correct_answer/3]).
-:- ['answers.pl'].
+:- module(kb_correct_answers, [correct_answer/3]).
 
 
 % module CFU

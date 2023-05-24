@@ -1,5 +1,6 @@
-:- use_module(answers, [ correct_answer/3 ]).
-:- use_module(weights, [ weights/3 ]).
+:- use_module(kb_correct_answers, [ correct_answer/3 ]).
+:- use_module(kb_weights, [ weights/3 ]).
+
 
 get_score([], _, _, 0).
 get_score([H|B], Test, Question, Score) :-
