@@ -3453,6 +3453,9 @@ width: max-content;
 .cursor-pointer{
   cursor: pointer;
 }
+.cursor-no-drop{
+  cursor: no-drop !important;
+}
 .select-none{
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -4243,6 +4246,9 @@ width: max-content;
 }
 .opacity-0{
   opacity: 0;
+}
+.opacity-50{
+  opacity: .5 !important;
 }
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -16179,6 +16185,9 @@ html body{
 .dark .litepicker .container__tooltip{
   --tw-bg-opacity: 1;
   background-color: rgb(var(--color-darkmode-400) / var(--tw-bg-opacity));
+}
+.react-tooltip {
+  z-index: 9999;
 }
 .dark .litepicker .container__tooltip:before,
           .dark .litepicker .container__tooltip:after {

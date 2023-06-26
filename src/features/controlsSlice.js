@@ -10,7 +10,8 @@ const initialState = {
         size: '',
         imgSrc: ''
     },
-    currentStep: 'cfu'
+    currentAbility: '',
+    currentStep: ''
 }
 
 export const controlsSlice = createSlice({
@@ -27,6 +28,9 @@ export const controlsSlice = createSlice({
                 state.modalOpt[k] = action.payload[k]
             })
         },
+        setCurrentAbility: (state, action) => {
+            state.currentStep = action.payload
+        },
         setCurrentStep: (state, action) => {
             state.currentStep = action.payload
         }
@@ -36,7 +40,8 @@ export const controlsSlice = createSlice({
 // selectors
 export const getMobileMenu = state => state.controls.mobileMenu
 export const getModalOpt = state => state.controls.modalOpt
+export const getCurrentAbility = state => state.controls.currentStep
 export const getCurrentStep = state => state.controls.currentStep
 
-export const { setMobileMenu, setModalOpt, setCurrentStep } = controlsSlice.actions;
+export const { setMobileMenu, setModalOpt, setCurrentAbility, setCurrentStep } = controlsSlice.actions;
 export default controlsSlice.reducer

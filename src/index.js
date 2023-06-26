@@ -7,9 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { routes as r } from './config/routes'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import { SoiTestContainer } from './components/tests/SoiTestContainer';
 import { Dashboard } from './components/home/Dashboard';
-
+import { SoiTestSelector } from './components/tests/SoiTestSelector';
+import { SoiTestContainer } from './components/tests/SoiTestContainer';
 
 
 const container = document.getElementById('root');
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
             },
             {
                 path: r.test.slug,
+                element: <SoiTestSelector />,
+            },
+            {
+                path: '/start-test/:test_id',
                 element: <SoiTestContainer />,
             }
         ]

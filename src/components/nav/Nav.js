@@ -21,7 +21,7 @@ export const Nav = ({classes, mobileCss}) => {
                 </NavLink>
             </li>
             <li>
-                <NavLink to={r.test.uri} className={location.pathname === r.test.uri ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
+                <NavLink to={r.test.uri} className={location.pathname.includes(r.test.uri) ? classes.a + ' ' + classes.active : classes.a} onClick={() => dispatch(setMobileMenu({mobileCss:'hidden',openMenu:''}))}>
                     <div className={classes.icon}> <Icon.Navigation /> </div>
                     <div className={classes.title}>{r.test.label}</div>
                 </NavLink>

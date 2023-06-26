@@ -6,7 +6,7 @@ const routes = {
         children: []
     },
     test: {
-        label: 'Let\'s start the test',
+        label: 'Test starting',
         uri: '/start-test',
         slug: 'start-test',
         children: []
