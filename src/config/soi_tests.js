@@ -59,26 +59,26 @@ const soi_tests = {
     },
     'nst': {
         component: <Nst />,
-        description: 'coNvergent Production of Symbolic Transformations (NST) is the ability to produce new symbolic items of information by revising given items. In its easier form it requires no more than the recognition of symbols in the context of other symbols.'
+        description: 'coNvergent Production of Symbolic Transformations (NST) is the ability to produce new symbolic items of information by revising given items. In its easier form it requires no more than the recognition of symbols in the context of other symbols. In the next more difficult form, the test requires some reading skills since the student is asked to separate words in a run-on sentence string.'
     }
 }
 
 const soi_abilities = {
     'operation': {
-        'divergent-production': ['dfu'],
-        'convergent-production':['nst', 'nfu'],
+        'divergent-production': [], // DFU not available
+        'convergent-production':['nst'], // NFU not available
         'evaluation':           ['efu'],
         'memory':               ['msu', 'mss', 'mfu'],
         'cognition':            ['cfu', 'cfc', 'cft', 'cmr', 'cms']
     },
     'content': {
-        'figural':              ['dfu', 'cfu', 'cfc', 'cft', 'efu', 'nfu', 'mfu'],
+        'figural':              ['cfu', 'cfc', 'cft', 'efu', 'mfu'], // DFU, NFU not available
         'symbolic':             ['nst', 'msu', 'mss'],
         'semantic':             ['cmr', 'cms'],
         'behavioral':           []
     },
     'product': {
-        'units':                ['dfu', 'cfu', 'efu', 'nfu', 'msu', 'mfu'],
+        'units':                ['cfu', 'efu', 'msu', 'mfu'], // DFU, NFU not available
         'classes':              ['cfc'],
         'relations':            ['cmr'],
         'systems':              ['cms', 'mss'],

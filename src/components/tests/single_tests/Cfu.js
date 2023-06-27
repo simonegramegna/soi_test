@@ -20,32 +20,32 @@ export const Cfu = () => {
         <div className="intro-y grid grid-cols-12 gap-5 mt-5 col-span-12">
             <div className="intro-y col-span-12">
                 <div className="grid grid-cols-12 gap-5 mt-5 pt-5 border-t">
-                    {
-                        Object.keys(answers).map(k => {
-                            return (
-                                <div key={k} className="intro-y block col-span-12 sm:col-span-4 2xl:col-span-3">
-                                    <div className="box rounded-md p-3 relative zoom-in">
-                                        <div className="flex-none relative block before:block before:w-full before:pt-[100%]" onClick={() => openLightbox('/images/tests/cfu/cfu_'+k+'.jpg','lg')}>
-                                            <div className="absolute top-0 left-0 w-full h-full image-fit">
-                                                <img alt={'cfu test '+k} className="rounded-md" src={'/images/tests/cfu/cfu_'+k+'.jpg'}/>
-                                            </div>
-                                        </div>
-                                        <div className="block font-medium text-center truncate mt-3">
-                                            <input
-                                                type='text'
-                                                name={'cfu_answer_'+k}
-                                                id={'cfu_answer_'+k}
-                                                className='form-control'
-                                                value={answers[k]}
-                                                placeholder='Write here...'
-                                                onChange={(e) => dispatch(setCfuAnswers({aNumber:k,aValue:e.target.value}))}
-                                            />
+                {
+                    Object.keys(answers).map(k => {
+                        return (
+                            <div key={k} className="intro-y block col-span-12 sm:col-span-4 2xl:col-span-3">
+                                <div className="box rounded-md p-3 relative zoom-in">
+                                    <div className="flex-none relative block before:block before:w-full before:pt-[100%]" onClick={() => openLightbox('/images/tests/cfu/cfu_'+k+'.jpg','lg')}>
+                                        <div className="absolute top-0 left-0 w-full h-full image-fit">
+                                            <img alt={'cfu test '+k} className="rounded-md" src={'/images/tests/cfu/cfu_'+k+'.jpg'}/>
                                         </div>
                                     </div>
+                                    <div className="block font-medium text-center truncate mt-3">
+                                        <input
+                                            type='text'
+                                            name={'cfu_answer_'+k}
+                                            id={'cfu_answer_'+k}
+                                            className='form-control'
+                                            value={answers[k]}
+                                            placeholder='Write here...'
+                                            onChange={(e) => dispatch(setCfuAnswers({aNumber:k,aValue:e.target.value}))}
+                                        />
+                                    </div>
                                 </div>
-                            )
-                        })
-                    }
+                            </div>
+                        )
+                    })
+                }
                 </div>
             </div>
         </div>

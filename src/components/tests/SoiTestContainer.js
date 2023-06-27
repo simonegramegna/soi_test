@@ -16,7 +16,7 @@ export const SoiTestContainer = () => {
 
     const goNext = () => {
         const trail = Object.keys(tests_seq)
-        const index = trail.indexOf(currentStep)
+        const index = trail.indexOf(currentStep === '' ? Object.keys(tests_seq)[0] : currentStep)
         if(index >= 0 && index < trail.length - 1){
             dispatch(setCurrentStep(trail[index+1]))
         }
@@ -24,7 +24,7 @@ export const SoiTestContainer = () => {
 
     const goPrevious = () => {
         const trail = Object.keys(tests_seq)
-        const index = trail.indexOf(currentStep)
+        const index = trail.indexOf(currentStep === '' ? Object.keys(tests_seq)[0] : currentStep)
         if(index > 0 && index <= trail.length - 1){
             dispatch(setCurrentStep(trail[index-1]))
         }

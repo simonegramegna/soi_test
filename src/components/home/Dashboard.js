@@ -77,9 +77,6 @@ export const Dashboard = () => {
                         </div>
                         <div className="text-center lg:text-left p-5">
                             <div className="mb-3">This test-tool has been realized as a lab activity for the exam in <strong>Fundamentals of Artificial Intelligence</strong>  with <strong>Professor Stefano Ferilli</strong> at <strong>University of Bari "<em>Aldo Moro</em>", Italy</strong>.</div>
-                            <div className="flex items-center justify-center lg:justify-start text-primary underline mt-5">
-                                <GitHub className="w-5 h-5 mr-2" /><Link to="#" onClick={(e) => {window.open('https://github.com/albertovalerio/petri-nets-tool-reactjs')}} >https://github.com/albertovalerio/petri-nets-tool-reactjs</Link>
-                            </div>
                         </div>
                     </div>
                 </div>

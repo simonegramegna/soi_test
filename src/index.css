@@ -2814,6 +2814,9 @@ top: 7px;
 .bottom-0{
   bottom: 0px;
 }
+.bottom--30{
+  bottom: -30px;
+}
 .z-10{
   z-index: 10;
 }

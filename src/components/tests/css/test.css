@@ -1,0 +1,29 @@
+.target-word {
+    font-weight: bold;
+    font-size: 5em;
+    cursor: text;
+    max-width: 100%;
+    font-family: monospace;
+}
+.target-word-container {
+    max-width: 100%;
+    overflow-x: scroll;
+}
+.target-word-container::-webkit-scrollbar-track:hover {
+	background-color: #f1f1f1;
+}
+.target-word-container::-webkit-scrollbar {
+	width: 5px;
+    height: 5px;
+}
+.target-word-container:hover::-webkit-scrollbar-thumb
+{
+	background-color: rgb(30 64 175);
+    border-radius: 5px;
+}
+.word-index {
+    font-size: .2em;
+    position: relative;
+    bottom: -15px;
+    left: -29px;
+}
