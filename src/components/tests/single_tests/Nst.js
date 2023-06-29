@@ -29,7 +29,7 @@ export const Nst = () => {
 
     const manageKeyDown = (e, answers) => {
         const key = e.keyCode || e.charCode
-        if ( key == 8 || key == 46 ) {
+        if ( key === 8 || key === 46 ) {
             dispatch(setNstAnswers({aNumber:answers,aValue:''}))
         }
     }
@@ -38,7 +38,7 @@ export const Nst = () => {
         <>
         <div className="font-medium text-base col-span-12">Did you find the word here?</div>
         <div className="text-base col-span-12">See the word in the small box; find the same word in the long box.</div>
-        <div className="alert alert-secondary show my-2 col-span-12" role="alert"><strong>Tips</strong>: when you find the word, write the letters numbers in the input box. Write only number, no letters, no spaces.</div>
+        <div className="alert alert-secondary show my-2 col-span-12" role="alert"><strong>Tips</strong>: when you find the word, write the letters numbers in the input box. Write only number, no letters, no spaces. Use leading zero for numbers less than ten.</div>
         <div className="intro-y grid grid-cols-12 gap-5 mt-5 col-span-12">
             <div className="intro-y col-span-12">    
             {

@@ -4,12 +4,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCurrentStep, setCurrentStep } from '../../features/controlsSlice'
 import { useParams } from 'react-router-dom'
 
-export const SoiTestProgress = () => {
+export const SoiTestProgress = ({validateTest}) => {
 
     const dispatch = useDispatch()
     const currentStep = useSelector(getCurrentStep)
     const { test_id } = useParams()
     const tests_seq = get_tests_sequence(test_id)
+
+    const manageOnClickNumber = (test_id) => {
+        if (validateTest() === 0) {
+            dispatch(setCurrentStep(test_id))
+        }
+    }
 
     return (
         <>
@@ -18,11 +24,11 @@ export const SoiTestProgress = () => {
                 Object.keys(tests_seq).map((k,i) => {
                     return ((currentStep === '') ? 
                         <div key={i} className="intro-x lg:text-center flex items-center mt-5 lg:mt-0  lg:block flex-1 z-10">
-                            <button type='button' className={'w-10 h-10 rounded-full btn '+(k === Object.keys(tests_seq)[0] ? 'btn-primary' : 'text-slate-500 bg-slate-100')} onClick={() => dispatch(setCurrentStep(k))}>{i+1}</button>
+                            <button type='button' className={'w-10 h-10 rounded-full btn '+(k === Object.keys(tests_seq)[0] ? 'btn-primary' : 'text-slate-500 bg-slate-100')} onClick={() => manageOnClickNumber(k)}>{i+1}</button>
                             <div className={'lg:w-32 text-base lg:mt-3 ml-3 lg:mx-auto '+(k === Object.keys(tests_seq)[0] ? 'font-medium' : 'text-slate-600')}>{k.toUpperCase()}</div>
                         </div> : 
                         <div key={i} className="intro-x lg:text-center flex items-center mt-5 lg:mt-0  lg:block flex-1 z-10">
-                            <button type='button' className={'w-10 h-10 rounded-full btn '+(k === currentStep ? 'btn-primary' : 'text-slate-500 bg-slate-100')} onClick={() => dispatch(setCurrentStep(k))}>{i+1}</button>
+                            <button type='button' className={'w-10 h-10 rounded-full btn '+(k === currentStep ? 'btn-primary' : 'text-slate-500 bg-slate-100')} onClick={() => manageOnClickNumber(k)}>{i+1}</button>
                             <div className={'lg:w-32 text-base lg:mt-3 ml-3 lg:mx-auto '+(k === currentStep ? 'font-medium' : 'text-slate-600')}>{k.toUpperCase()}</div>
                         </div>
                     )

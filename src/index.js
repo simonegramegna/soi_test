@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Dashboard } from './components/home/Dashboard';
 import { SoiTestSelector } from './components/tests/SoiTestSelector';
 import { SoiTestContainer } from './components/tests/SoiTestContainer';
+import { SoiTestResult } from './components/tests/SoiTestResult';
 
 
 const container = document.getElementById('root');
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/start-test/:test_id',
                 element: <SoiTestContainer />,
+            },
+            {
+                path: '/start-test/result',
+                element: <SoiTestResult />,
             }
         ]
     }

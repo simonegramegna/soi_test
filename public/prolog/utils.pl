@@ -1,3 +1,4 @@
+:- module(utils, [ get_weighted_score/3  ]).
 :- use_module(kb_correct_answers, [ correct_answer/3 ]).
 :- use_module(kb_weights, [ weights/3 ]).
 
@@ -19,10 +20,14 @@ get_weighted_score(Answers, Test, WeightedScore) :-
     get_score(Answers, Test, 1, Score),
     weights(Test, Divider1, Divider2),
     WScore is Score / Divider1 / Divider2,
-    my_rounding_function(WScore, WeightedScore, 2).
+    my_rounding_function(WScore, WeightedScore, 3).
 
 
 my_rounding_function(Number, Rounded, NrDecimal) :-
     Number1 is Number * 10^NrDecimal,
     round(Number1, Integer),
     Rounded is Integer / 10^NrDecimal.
+
+round(X, Rounded) :-
+    Fractional is X - floor(X),
+    (Fractional >= 0.5 -> Rounded is ceiling(X); Rounded is floor(X)).

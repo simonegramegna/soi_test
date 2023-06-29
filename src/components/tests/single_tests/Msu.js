@@ -39,7 +39,7 @@ export const Msu = () => {
 
     const manageKeyDown = (e, answers) => {
         const key = e.keyCode || e.charCode
-        if ( key == 8 || key == 46 ) {
+        if ( key === 8 || key === 46 ) {
             dispatch(setMsuAnswers({aNumber:answers,aValue:''}))
         }
     }

@@ -4,13 +4,16 @@ import { Tooltip } from 'react-tooltip'
 import { soi_abilities } from "../../config/soi_tests"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { setCurrentStep } from "../../features/controlsSlice"
+import { setCurrentStep, setToastOpt } from "../../features/controlsSlice"
+import { resetAnswers } from "../../features/soiSlice"
 
 export const SoiTestSelector = () => {
 
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(setCurrentStep(''))
+        dispatch(setToastOpt({isVisible:false,errors:[]}))
+        dispatch(resetAnswers(''))
     },[dispatch])
 
     return (

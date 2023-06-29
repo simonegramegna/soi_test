@@ -1,7 +1,4 @@
-:- module(kb_correct_answers, [correct_answer/3]).
-
-
-% module CFU
+% test CFU
 correct_answer(cfu, 1, 'dog').
 correct_answer(cfu, 1, 'pup').
 correct_answer(cfu, 1, 'puppy').
@@ -67,7 +64,7 @@ correct_answer(cfu, 15, 'squash').
 correct_answer(cfu, 15, 'gourd').
 
 
-% module CFC
+% test CFC
 correct_answer(cfc, 1, '7').
 correct_answer(cfc, 2, '4').
 correct_answer(cfc, 2, '5').
@@ -79,7 +76,7 @@ correct_answer(cfc, 7, '1').
 correct_answer(cfc, 8, '6').
 
 
-% module CFT
+% test CFT
 correct_answer(cft, 1, '3').
 correct_answer(cft, 2, '5').
 correct_answer(cft, 3, '4').
@@ -89,7 +86,7 @@ correct_answer(cft, 6, '3').
 correct_answer(cft, 7, '5').
 
 
-% module CMR
+% test CMR
 correct_answer(cmr, 1, '3').
 correct_answer(cmr, 2, '2').
 correct_answer(cmr, 3, '3').
@@ -99,7 +96,7 @@ correct_answer(cmr, 6, '3').
 correct_answer(cmr, 7, '3').
 
 
-% module CMS
+% test CMS
 correct_answer(cms, 1, '4').
 correct_answer(cms, 2, '2').
 correct_answer(cms, 3, '3').
@@ -107,7 +104,7 @@ correct_answer(cms, 4, '1').
 correct_answer(cms, 5, '4').
 correct_answer(cms, 6, '2').
 
-% module EFU
+% test EFU
 correct_answer(efu, 1, 5).
 correct_answer(efu, 2, 2).
 correct_answer(efu, 3, 3).
@@ -117,7 +114,7 @@ correct_answer(efu, 6, 2).
 correct_answer(efu, 7, 3).
 
 
-% module NST First Level
+% test NST First Level
 correct_answer(nst, 1, '13-14-15').
 correct_answer(nst, 2, '08-09-10').
 correct_answer(nst, 3, '10-11-12-13').
@@ -126,7 +123,7 @@ correct_answer(nst, 5, '20-21-22-23').
 correct_answer(nst, 6, '18-19-20-21').
 
 
-% module MSU
+% test MSU
 correct_answer(msu, 11, '1').
 correct_answer(msu, 12, '1').
 correct_answer(msu, 13, '1').
@@ -141,7 +138,7 @@ correct_answer(msu, 34, '1').
 correct_answer(msu, 35, '1').
 
 
-% module MSS
+% test MSS
 correct_answer(mss, 11, '1').
 correct_answer(mss, 12, '1').
 correct_answer(mss, 13, '1').
@@ -154,3 +151,58 @@ correct_answer(mss, 32, '1').
 correct_answer(mss, 33, '1').
 correct_answer(mss, 34, '1').
 correct_answer(mss, 35, '1').
+
+
+
+weights(dfu_f, 2, 6).
+weights(dfu_s, 0.83, 6).
+weights(dfu_t, 1.33, 6).
+weights(dfu_o, 0.67, 6).
+weights(cfu, 2.5, 6).
+weights(cfc, 1.33, 6).
+weights(cft, 1.17, 6).
+weights(cmr, 1.17, 6).
+weights(cms, 1, 6).
+weights(efu, 1.17, 6).
+weights(nst, 6, 6).
+weights(nfu, 5, 6).
+weights(msu, 2, 6).
+weights(mss, 2, 6).
+weights(mfu, 2, 6).
+
+
+
+
+
+get_score([], _, _, 0).
+get_score([H|B], Test, Question, Score) :-
+    correct_answer(Test, Question, H),
+    Question1 is Question + 1,
+    get_score(B, Test, Question1, Score1),
+    Score is Score1 + 1,!.
+get_score([H|B], Test, Question, Score) :-
+    \+ correct_answer(Test, Question, H),
+    Question1 is Question + 1,
+    get_score(B, Test, Question1, Score1),
+    Score is Score1,!.
+
+
+get_weighted_score(Answers, Test, WeightedScore) :-
+    get_score(Answers, Test, 1, Score),
+    weights(Test, Divider1, Divider2),
+    WScore is Score / Divider1 / Divider2,
+    my_rounding_function(WScore, WeightedScore, 3).
+
+
+my_rounding_function(Number, Rounded, NrDecimal) :-
+    Number1 is Number * 10^NrDecimal,
+    round(Number1, Integer),
+    Rounded is Integer / 10^NrDecimal.
+
+
+round(X, Rounded) :-
+    Fractional is X - floor(X),
+    (Fractional >= 0.5 -> Rounded is ceiling(X); Rounded is floor(X)).
+
+
+get_result(Answers, Test, WeightedScore) :- get_weighted_score(Answers, Test, WeightedScore).

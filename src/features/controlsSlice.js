@@ -51,7 +51,12 @@ const initialState = {
             visibility: 'block',
             progressWidth: '100%'
         },
-    }
+    },
+    toastOpt: {
+        isVisible: false,
+        attentionSeeker: false,
+        errors: []
+    },
 }
 
 export const controlsSlice = createSlice({
@@ -83,6 +88,11 @@ export const controlsSlice = createSlice({
             Object.keys(action.payload.aValue).forEach(k => {
                 state.randomGeneratorMss[action.payload.aNumber][k] = action.payload.aValue[k]
             })
+        },
+        setToastOpt: (state, action) => {
+            Object.keys(action.payload).forEach((k) => {
+                state.toastOpt[k] = action.payload[k]
+            })
         }
     }
 })
@@ -94,6 +104,7 @@ export const getCurrentAbility = state => state.controls.currentStep
 export const getCurrentStep = state => state.controls.currentStep
 export const getRandomGeneratorMsu = state => state.controls.randomGeneratorMsu
 export const getRandomGeneratorMss = state => state.controls.randomGeneratorMss
+export const getToastOpt = state => state.controls.toastOpt
 
-export const { setMobileMenu, setModalOpt, setCurrentAbility, setCurrentStep, setRandomGeneratorMsu, setRandomGeneratorMss } = controlsSlice.actions;
+export const { setMobileMenu, setModalOpt, setCurrentAbility, setCurrentStep, setRandomGeneratorMsu, setRandomGeneratorMss, setToastOpt } = controlsSlice.actions;
 export default controlsSlice.reducer

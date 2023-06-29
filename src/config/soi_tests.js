@@ -19,7 +19,7 @@ const soi_tests = {
     },
     'cft': {
         component: <Cft />,
-        description: 'Cognition of Figural Transformation (CFT) is the ability to transform figures and to recognize a figure when it has been rotated into a new orientation. This is a test of the student\'s ability to transform figures ­and recognize them.'
+        description: 'Cognition of Figural Transformation (CFT) is the ability to transform figures and to recognize a figure when it has been rotated into a new orientation. This is a test of the student\'s ability to transform figures and recognize them.'
     },
     'cfu': {
         component: <Cfu />,
@@ -27,7 +27,7 @@ const soi_tests = {
     },
     'cmr': {
         component: <Cmr />,
-        description: 'Cognition of seMantic Relations (CMR) is the ability to see relationships between meanings of words or ideas. In this test of semantic relations the task is to identify what comes in between two stimulus items. The relation­ships vary, some are temporal, some are historical, some are quantitative, etc..'
+        description: 'Cognition of seMantic Relations (CMR) is the ability to see relationships between meanings of words or ideas. In this test of semantic relations the task is to identify what comes in between two stimulus items. The relationships vary, some are temporal, some are historical, some are quantitative, etc..'
     },
     'cms': {
         component: <Cms />,
@@ -66,19 +66,19 @@ const soi_tests = {
 const soi_abilities = {
     'operation': {
         'divergent-production': [], // DFU not available
-        'convergent-production':['nst'], // NFU not available
+        'convergent-production':['nst'],
         'evaluation':           ['efu'],
-        'memory':               ['msu', 'mss', 'mfu'],
+        'memory':               ['msu', 'mss'], // MFU not available
         'cognition':            ['cfu', 'cfc', 'cft', 'cmr', 'cms']
     },
     'content': {
-        'figural':              ['cfu', 'cfc', 'cft', 'efu', 'mfu'], // DFU, NFU not available
+        'figural':              ['cfu', 'cfc', 'cft', 'efu'], // DFU, NFU, MFU not available
         'symbolic':             ['nst', 'msu', 'mss'],
         'semantic':             ['cmr', 'cms'],
         'behavioral':           []
     },
     'product': {
-        'units':                ['cfu', 'efu', 'msu', 'mfu'], // DFU, NFU not available
+        'units':                ['cfu', 'efu', 'msu'], // DFU, NFU, MFU not available
         'classes':              ['cfc'],
         'relations':            ['cmr'],
         'systems':              ['cms', 'mss'],

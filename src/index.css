@@ -8163,6 +8163,7 @@ font-weight: bold;
 }
 .toastify.on {
   opacity: 1;
+  top: 15px;
 }
 .toast-close {
   opacity: 0.4;
@@ -16305,6 +16306,9 @@ html body{
 }
 .tippy-box{
   border-radius: 0.375rem;
+}
+.list-disc {
+  list-style-type: disc;
 }
 .dark .tippy-box{
   --tw-bg-opacity: 1;
