@@ -33,7 +33,7 @@ const router = createBrowserRouter([
                 element: <SoiTestContainer />,
             },
             {
-                path: '/start-test/result',
+                path: r.result.slug,
                 element: <SoiTestResult />,
             }
         ]

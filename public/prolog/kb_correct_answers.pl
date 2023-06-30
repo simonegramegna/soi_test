@@ -68,44 +68,44 @@ correct_answer(cfu, 15, 'gourd').
 
 
 % module CFC
-correct_answer(cfc, 1, '7').
-correct_answer(cfc, 2, '4').
-correct_answer(cfc, 2, '5').
-correct_answer(cfc, 3, '4').
-correct_answer(cfc, 4, '3').
-correct_answer(cfc, 5, '8').
-correct_answer(cfc, 6, '2').
-correct_answer(cfc, 7, '1').
-correct_answer(cfc, 8, '6').
+correct_answer(cfc, 1, 7).
+correct_answer(cfc, 2, 4).
+correct_answer(cfc, 2, 5).
+correct_answer(cfc, 3, 4).
+correct_answer(cfc, 4, 3).
+correct_answer(cfc, 5, 8).
+correct_answer(cfc, 6, 2).
+correct_answer(cfc, 7, 1).
+correct_answer(cfc, 8, 6).
 
 
 % module CFT
-correct_answer(cft, 1, '3').
-correct_answer(cft, 2, '5').
-correct_answer(cft, 3, '4').
-correct_answer(cft, 4, '2').
-correct_answer(cft, 5, '1').
-correct_answer(cft, 6, '3').
-correct_answer(cft, 7, '5').
+correct_answer(cft, 1, 3).
+correct_answer(cft, 2, 5).
+correct_answer(cft, 3, 4).
+correct_answer(cft, 4, 2).
+correct_answer(cft, 5, 1).
+correct_answer(cft, 6, 3).
+correct_answer(cft, 7, 5).
 
 
 % module CMR
-correct_answer(cmr, 1, '3').
-correct_answer(cmr, 2, '2').
-correct_answer(cmr, 3, '3').
-correct_answer(cmr, 4, '1').
-correct_answer(cmr, 5, '2').
-correct_answer(cmr, 6, '3').
-correct_answer(cmr, 7, '3').
+correct_answer(cmr, 1, 3).
+correct_answer(cmr, 2, 2).
+correct_answer(cmr, 3, 3).
+correct_answer(cmr, 4, 1).
+correct_answer(cmr, 5, 2).
+correct_answer(cmr, 6, 3).
+correct_answer(cmr, 7, 3).
 
 
 % module CMS
-correct_answer(cms, 1, '4').
-correct_answer(cms, 2, '2').
-correct_answer(cms, 3, '3').
-correct_answer(cms, 4, '1').
-correct_answer(cms, 5, '4').
-correct_answer(cms, 6, '2').
+correct_answer(cms, 1, 4).
+correct_answer(cms, 2, 2).
+correct_answer(cms, 3, 3).
+correct_answer(cms, 4, 1).
+correct_answer(cms, 5, 4).
+correct_answer(cms, 6, 2).
 
 % module EFU
 correct_answer(efu, 1, 5).
@@ -127,30 +127,30 @@ correct_answer(nst, 6, '18-19-20-21').
 
 
 % module MSU
-correct_answer(msu, 11, '1').
-correct_answer(msu, 12, '1').
-correct_answer(msu, 13, '1').
-correct_answer(msu, 21, '1').
-correct_answer(msu, 22, '1').
-correct_answer(msu, 23, '1').
-correct_answer(msu, 24, '1').
-correct_answer(msu, 31, '1').
-correct_answer(msu, 32, '1').
-correct_answer(msu, 33, '1').
-correct_answer(msu, 34, '1').
-correct_answer(msu, 35, '1').
+correct_answer(msu, 1, 1).
+correct_answer(msu, 2, 1).
+correct_answer(msu, 3, 1).
+correct_answer(msu, 4, 1).
+correct_answer(msu, 5, 1).
+correct_answer(msu, 6, 1).
+correct_answer(msu, 7, 1).
+correct_answer(msu, 8, 1).
+correct_answer(msu, 9, 1).
+correct_answer(msu, 10, 1).
+correct_answer(msu, 11, 1).
+correct_answer(msu, 12, 1).
 
 
 % module MSS
-correct_answer(mss, 11, '1').
-correct_answer(mss, 12, '1').
-correct_answer(mss, 13, '1').
-correct_answer(mss, 21, '1').
-correct_answer(mss, 22, '1').
-correct_answer(mss, 23, '1').
-correct_answer(mss, 24, '1').
-correct_answer(mss, 31, '1').
-correct_answer(mss, 32, '1').
-correct_answer(mss, 33, '1').
-correct_answer(mss, 34, '1').
-correct_answer(mss, 35, '1').
+correct_answer(mss, 1, 1).
+correct_answer(mss, 2, 1).
+correct_answer(mss, 3, 1).
+correct_answer(mss, 4, 1).
+correct_answer(mss, 5, 1).
+correct_answer(mss, 6, 1).
+correct_answer(mss, 7, 1).
+correct_answer(mss, 8, 1).
+correct_answer(mss, 9, 1).
+correct_answer(mss, 10, 1).
+correct_answer(mss, 11, 1).
+correct_answer(mss, 12, 1).

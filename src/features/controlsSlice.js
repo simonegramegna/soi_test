@@ -15,19 +15,19 @@ const initialState = {
     randomGeneratorMsu: {
         '1': {
             maxLength: 3,
-            sequence: '',
+            sequence: '111',
             visibility: 'block',
             progressWidth: '100%'
         },
         '2': {
             maxLength: 4,
-            sequence: '',
+            sequence: '1111',
             visibility: 'block',
             progressWidth: '100%'
         },
         '3': {
             maxLength: 5,
-            sequence: '',
+            sequence: '11111',
             visibility: 'block',
             progressWidth: '100%'
         },
@@ -35,19 +35,19 @@ const initialState = {
     randomGeneratorMss: {
         '1': {
             maxLength: 3,
-            sequence: '',
+            sequence: '111',
             visibility: 'block',
             progressWidth: '100%'
         },
         '2': {
             maxLength: 4,
-            sequence: '',
+            sequence: '1111',
             visibility: 'block',
             progressWidth: '100%'
         },
         '3': {
             maxLength: 5,
-            sequence: '',
+            sequence: '11111',
             visibility: 'block',
             progressWidth: '100%'
         },
@@ -105,6 +105,12 @@ export const getCurrentStep = state => state.controls.currentStep
 export const getRandomGeneratorMsu = state => state.controls.randomGeneratorMsu
 export const getRandomGeneratorMss = state => state.controls.randomGeneratorMss
 export const getToastOpt = state => state.controls.toastOpt
+export const getRandomSequence = (state) => {
+    return {
+        'msu': Object.values(state.controls.randomGeneratorMsu).map(e => e.sequence),
+        'mss': Object.values(state.controls.randomGeneratorMss).map(e => e.sequence)
+    }
+}
 
 export const { setMobileMenu, setModalOpt, setCurrentAbility, setCurrentStep, setRandomGeneratorMsu, setRandomGeneratorMss, setToastOpt } = controlsSlice.actions;
 export default controlsSlice.reducer

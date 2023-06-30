@@ -1,9 +1,9 @@
 import React from 'react'
 import { SoiTestProgress } from './SoiTestProgress'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCurrentStep, getModalOpt, getToastOpt, setCurrentStep, setToastOpt } from '../../features/controlsSlice'
+import { getCurrentStep, getModalOpt, getRandomSequence, getToastOpt, setCurrentStep, setToastOpt } from '../../features/controlsSlice'
 import { Modal } from '../utils/Modal'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { get_tests_sequence } from '../../config/soi_tests'
 import { ArrowLeft, ArrowRight } from 'react-feather'
 import { getAllAnswers, setResult } from '../../features/soiSlice'
@@ -18,6 +18,9 @@ export const SoiTestContainer = () => {
     const { test_id } = useParams()
     const tests_seq = get_tests_sequence(test_id)
     const allAnswers = useSelector(getAllAnswers)
+    const random_sequence = useSelector(getRandomSequence)
+    const navigate = useNavigate()
+
 
     const goNext = () => {
         const trail = Object.keys(tests_seq)
@@ -40,19 +43,14 @@ export const SoiTestContainer = () => {
             const session = window.pl.create()
             session.consult('/prolog/compiled.pl', {
                 success: function() {
-                    console.log('Program loaded correctly')
-                    const goal = 'get_result(['+allAnswers[Object.keys(tests_seq)[0]]+'], '+Object.keys(tests_seq)[0]+', Score).'
-                    console.log(goal)
+                    const goal = 'get_result(['+getFormattedAnswers()+'],['+Object.keys(tests_seq)+'],Score).'
                     session.query(goal, {
                         success: function(goal) {
-                            console.log('success query')
-                            console.log({goal})
                             session.answer({
                                 success: function(a) {
-                                    const answer = a.links.Score.value
-                                    console.log('success answer', answer)
-                                    dispatch(setResult(answer))
-                                    window.location.replace('/start-test/result')
+                                    const score = a.links.Score.value
+                                    dispatch(setResult({score,test_id}))
+                                    navigate('/test-report')
                                 },
                                 fail: function() { /* No more answers */ },
                                 error: function(err) { console.log(`answer error: ${err}`) },
@@ -64,7 +62,6 @@ export const SoiTestContainer = () => {
                 },
                 error: function(err) { console.log({err}) }
             })
-    
         }
     }
 
@@ -87,6 +84,31 @@ export const SoiTestContainer = () => {
         }
         return errors.length
     }
+
+    const getFormattedAnswers = () => {
+        let string = ''
+        Object.keys(tests_seq).forEach((k,j) => {
+            string += '['
+            if (k !== 'msu' && k !== 'mss') {
+                allAnswers[k].forEach((a,i) => {
+                    string += a === '' ? 0 : a
+                    string += (i === allAnswers[k].length - 1 ? '' : ',')
+                })                    
+            } else {
+                random_sequence[k].forEach((s,i) => {
+                    s.split('').forEach((c,j) => {
+                        string += (c !== allAnswers[k][i].split('-')[j] || allAnswers[k][i].split('-')[j] === '') ? 0 : 1
+                        string += (j === s.split('').length - 1 ? '' : ',')
+                    })
+                    string += (i === allAnswers[k].length - 1 ? '' : ',')
+                })
+            }
+            string += ']'
+            string += (j === Object.keys(tests_seq).length - 1 ? '' : ',')
+        })
+        return string
+    }
+
 
     return (
         <>

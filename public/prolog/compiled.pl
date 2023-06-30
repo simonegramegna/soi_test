@@ -1,4 +1,5 @@
 % test CFU
+% module CFU
 correct_answer(cfu, 1, 'dog').
 correct_answer(cfu, 1, 'pup').
 correct_answer(cfu, 1, 'puppy').
@@ -64,47 +65,47 @@ correct_answer(cfu, 15, 'squash').
 correct_answer(cfu, 15, 'gourd').
 
 
-% test CFC
-correct_answer(cfc, 1, '7').
-correct_answer(cfc, 2, '4').
-correct_answer(cfc, 2, '5').
-correct_answer(cfc, 3, '4').
-correct_answer(cfc, 4, '3').
-correct_answer(cfc, 5, '8').
-correct_answer(cfc, 6, '2').
-correct_answer(cfc, 7, '1').
-correct_answer(cfc, 8, '6').
+% module CFC
+correct_answer(cfc, 1, 7).
+correct_answer(cfc, 2, 4).
+correct_answer(cfc, 2, 5).
+correct_answer(cfc, 3, 4).
+correct_answer(cfc, 4, 3).
+correct_answer(cfc, 5, 8).
+correct_answer(cfc, 6, 2).
+correct_answer(cfc, 7, 1).
+correct_answer(cfc, 8, 6).
 
 
-% test CFT
-correct_answer(cft, 1, '3').
-correct_answer(cft, 2, '5').
-correct_answer(cft, 3, '4').
-correct_answer(cft, 4, '2').
-correct_answer(cft, 5, '1').
-correct_answer(cft, 6, '3').
-correct_answer(cft, 7, '5').
+% module CFT
+correct_answer(cft, 1, 3).
+correct_answer(cft, 2, 5).
+correct_answer(cft, 3, 4).
+correct_answer(cft, 4, 2).
+correct_answer(cft, 5, 1).
+correct_answer(cft, 6, 3).
+correct_answer(cft, 7, 5).
 
 
-% test CMR
-correct_answer(cmr, 1, '3').
-correct_answer(cmr, 2, '2').
-correct_answer(cmr, 3, '3').
-correct_answer(cmr, 4, '1').
-correct_answer(cmr, 5, '2').
-correct_answer(cmr, 6, '3').
-correct_answer(cmr, 7, '3').
+% module CMR
+correct_answer(cmr, 1, 3).
+correct_answer(cmr, 2, 2).
+correct_answer(cmr, 3, 3).
+correct_answer(cmr, 4, 1).
+correct_answer(cmr, 5, 2).
+correct_answer(cmr, 6, 3).
+correct_answer(cmr, 7, 3).
 
 
-% test CMS
-correct_answer(cms, 1, '4').
-correct_answer(cms, 2, '2').
-correct_answer(cms, 3, '3').
-correct_answer(cms, 4, '1').
-correct_answer(cms, 5, '4').
-correct_answer(cms, 6, '2').
+% module CMS
+correct_answer(cms, 1, 4).
+correct_answer(cms, 2, 2).
+correct_answer(cms, 3, 3).
+correct_answer(cms, 4, 1).
+correct_answer(cms, 5, 4).
+correct_answer(cms, 6, 2).
 
-% test EFU
+% module EFU
 correct_answer(efu, 1, 5).
 correct_answer(efu, 2, 2).
 correct_answer(efu, 3, 3).
@@ -114,7 +115,7 @@ correct_answer(efu, 6, 2).
 correct_answer(efu, 7, 3).
 
 
-% test NST First Level
+% module NST First Level
 correct_answer(nst, 1, '13-14-15').
 correct_answer(nst, 2, '08-09-10').
 correct_answer(nst, 3, '10-11-12-13').
@@ -123,34 +124,34 @@ correct_answer(nst, 5, '20-21-22-23').
 correct_answer(nst, 6, '18-19-20-21').
 
 
-% test MSU
-correct_answer(msu, 11, '1').
-correct_answer(msu, 12, '1').
-correct_answer(msu, 13, '1').
-correct_answer(msu, 21, '1').
-correct_answer(msu, 22, '1').
-correct_answer(msu, 23, '1').
-correct_answer(msu, 24, '1').
-correct_answer(msu, 31, '1').
-correct_answer(msu, 32, '1').
-correct_answer(msu, 33, '1').
-correct_answer(msu, 34, '1').
-correct_answer(msu, 35, '1').
+% module MSU
+correct_answer(msu, 1, 1).
+correct_answer(msu, 2, 1).
+correct_answer(msu, 3, 1).
+correct_answer(msu, 4, 1).
+correct_answer(msu, 5, 1).
+correct_answer(msu, 6, 1).
+correct_answer(msu, 7, 1).
+correct_answer(msu, 8, 1).
+correct_answer(msu, 9, 1).
+correct_answer(msu, 10, 1).
+correct_answer(msu, 11, 1).
+correct_answer(msu, 12, 1).
 
 
-% test MSS
-correct_answer(mss, 11, '1').
-correct_answer(mss, 12, '1').
-correct_answer(mss, 13, '1').
-correct_answer(mss, 21, '1').
-correct_answer(mss, 22, '1').
-correct_answer(mss, 23, '1').
-correct_answer(mss, 24, '1').
-correct_answer(mss, 31, '1').
-correct_answer(mss, 32, '1').
-correct_answer(mss, 33, '1').
-correct_answer(mss, 34, '1').
-correct_answer(mss, 35, '1').
+% module MSS
+correct_answer(mss, 1, 1).
+correct_answer(mss, 2, 1).
+correct_answer(mss, 3, 1).
+correct_answer(mss, 4, 1).
+correct_answer(mss, 5, 1).
+correct_answer(mss, 6, 1).
+correct_answer(mss, 7, 1).
+correct_answer(mss, 8, 1).
+correct_answer(mss, 9, 1).
+correct_answer(mss, 10, 1).
+correct_answer(mss, 11, 1).
+correct_answer(mss, 12, 1).
 
 
 
@@ -205,4 +206,8 @@ round(X, Rounded) :-
     (Fractional >= 0.5 -> Rounded is ceiling(X); Rounded is floor(X)).
 
 
-get_result(Answers, Test, WeightedScore) :- get_weighted_score(Answers, Test, WeightedScore).
+get_result([], [], 0).
+get_result([Answers|Tail], [Test|Tests], Result) :-
+    get_weighted_score(Answers, Test, WeightedScore),
+    get_result(Tail, Tests, Result1),
+    Result is Result1 + WeightedScore.

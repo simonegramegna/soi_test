@@ -10,6 +10,12 @@ const routes = {
         uri: '/start-test',
         slug: 'start-test',
         children: []
+    },
+    result: {
+        label: 'Test report',
+        uri: '/test-report',
+        slug: 'test-report',
+        children: []
     }
 }
 

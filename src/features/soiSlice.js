@@ -81,7 +81,11 @@ const initialState = {
         '2': '',
         '3': ''
     },
-    result: '' 
+    result: {
+        score: '',
+        test_id: '',
+        avg: ''
+    }
 }
 
 export const soiSlice = createSlice({
@@ -127,7 +131,9 @@ export const soiSlice = createSlice({
             state.mssAnswers = {'1':'','2':'','3':''}
         },
         setResult: (state, action) => {
-            state.result = action.payload
+            Object.keys(action.payload).forEach((k) => {
+                state.result[k] = action.payload[k]
+            })
         }
     }
 })
