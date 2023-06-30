@@ -43,8 +43,8 @@ export const SoiTestContainer = () => {
             const session = window.pl.create()
             session.consult('/prolog/compiled.pl', {
                 success: function() {
-                    const goal = 'get_result(['+getFormattedAnswers()+'],['+Object.keys(tests_seq)+'],Score).'
-                    console.log(goal)
+                    const goal = 'get_score_result(['+getFormattedAnswers()+'],['+Object.keys(tests_seq)+'], Score).'
+                    console.log('goal: ', goal)
                     session.query(goal, {
                         success: function(goal) {
                             session.answer({

@@ -65,8 +65,8 @@ const soi_tests = {
 
 const soi_abilities = {
     'operation': {
-        'divergent-production': [], // DFU not available
-        'convergent-production':['nst'],
+        'divergent_production': [], // DFU not available
+        'convergent_production':['nst'], // NFU not availble
         'evaluation':           ['efu'],
         'memory':               ['msu', 'mss'], // MFU not available
         'cognition':            ['cfu', 'cfc', 'cft', 'cmr', 'cms']

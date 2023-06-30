@@ -1,7 +1,7 @@
-:- module(kb_correct_answers, [correct_answer/3]).
+:- module(kb_correct_answers, [ correct_answer/3 ]).
 
 
-% module CFU
+% test CFU
 correct_answer(cfu, 1, 'dog').
 correct_answer(cfu, 1, 'pup').
 correct_answer(cfu, 1, 'puppy').
@@ -67,7 +67,7 @@ correct_answer(cfu, 15, 'squash').
 correct_answer(cfu, 15, 'gourd').
 
 
-% module CFC
+% test CFC
 correct_answer(cfc, 1, 7).
 correct_answer(cfc, 2, 4).
 correct_answer(cfc, 2, 5).
@@ -79,7 +79,7 @@ correct_answer(cfc, 7, 1).
 correct_answer(cfc, 8, 6).
 
 
-% module CFT
+% test CFT
 correct_answer(cft, 1, 3).
 correct_answer(cft, 2, 5).
 correct_answer(cft, 3, 4).
@@ -89,7 +89,7 @@ correct_answer(cft, 6, 3).
 correct_answer(cft, 7, 5).
 
 
-% module CMR
+% test CMR
 correct_answer(cmr, 1, 3).
 correct_answer(cmr, 2, 2).
 correct_answer(cmr, 3, 3).
@@ -99,7 +99,7 @@ correct_answer(cmr, 6, 3).
 correct_answer(cmr, 7, 3).
 
 
-% module CMS
+% test CMS
 correct_answer(cms, 1, 4).
 correct_answer(cms, 2, 2).
 correct_answer(cms, 3, 3).
@@ -107,7 +107,7 @@ correct_answer(cms, 4, 1).
 correct_answer(cms, 5, 4).
 correct_answer(cms, 6, 2).
 
-% module EFU
+% test EFU
 correct_answer(efu, 1, 5).
 correct_answer(efu, 2, 2).
 correct_answer(efu, 3, 3).
@@ -117,7 +117,7 @@ correct_answer(efu, 6, 2).
 correct_answer(efu, 7, 3).
 
 
-% module NST First Level
+% test NST First Level
 correct_answer(nst, 1, 131415).
 correct_answer(nst, 2, 080910).
 correct_answer(nst, 3, 10111213).
@@ -126,7 +126,7 @@ correct_answer(nst, 5, 20212223).
 correct_answer(nst, 6, 18192021).
 
 
-% module MSU
+% test MSU
 correct_answer(msu, 1, 1).
 correct_answer(msu, 2, 1).
 correct_answer(msu, 3, 1).
@@ -141,7 +141,7 @@ correct_answer(msu, 11, 1).
 correct_answer(msu, 12, 1).
 
 
-% module MSS
+% test MSS
 correct_answer(mss, 1, 1).
 correct_answer(mss, 2, 1).
 correct_answer(mss, 3, 1).

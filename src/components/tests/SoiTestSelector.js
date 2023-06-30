@@ -5,7 +5,7 @@ import { soi_abilities } from "../../config/soi_tests"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
 import { setCurrentStep, setToastOpt } from "../../features/controlsSlice"
-import { resetAnswers } from "../../features/soiSlice"
+import { resetAnswers, setResult } from "../../features/soiSlice"
 
 export const SoiTestSelector = () => {
 
@@ -14,6 +14,7 @@ export const SoiTestSelector = () => {
         dispatch(setCurrentStep(''))
         dispatch(setToastOpt({isVisible:false,errors:[]}))
         dispatch(resetAnswers(''))
+        dispatch(setResult({score:'',test_id:'',avg:''}))
     },[dispatch])
 
     return (
@@ -51,7 +52,7 @@ export const SoiTestSelector = () => {
                                                 <div className="intro-y">
                                                     <div className="box px-4 py-4 mb-3 flex items-center zoom-in">
                                                         <div className="ml-4 mr-auto">
-                                                            <div className="font-medium">{abil.replace('-',' ').charAt(0).toUpperCase() + abil.replace('-',' ').slice(1)}</div>
+                                                            <div className="font-medium">{abil.replace('_',' ').charAt(0).toUpperCase() + abil.replace('_',' ').slice(1)}</div>
                                                             <div className="text-slate-500 text-xs mt-0.5">{soi_abilities[face][abil].length + (soi_abilities[face][abil].length === 1 ? ' Test' : ' Tests')}</div>
                                                         </div>
                                                         <div className="py-1 px-2 rounded-full text-xs bg-success text-white cursor-pointer font-medium"><ArrowRight /></div>
@@ -61,7 +62,7 @@ export const SoiTestSelector = () => {
                                             <div key={k} className="intro-y cursor-no-drop" data-tooltip-id="not-avl" data-tooltip-content="Tests not available!">
                                                 <div className="box px-4 py-4 mb-3 flex items-center">
                                                     <div className="ml-4 mr-auto">
-                                                        <div className="font-medium opacity-50">{abil.charAt(0).toUpperCase() + abil.slice(1)}</div>
+                                                        <div className="font-medium opacity-50">{abil.replace('_',' ').charAt(0).toUpperCase() + abil.replace('_',' ').slice(1)}</div>
                                                     </div>
                                                 </div>
                                             </div>
