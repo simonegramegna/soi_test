@@ -30,7 +30,7 @@ export const SoiTestResult = () => {
                 },
                 error: function(err) { console.log({err}) }
             })
-    },[])
+    },[dispatch, result])
 
     return (
         <div className="col-span-12 xl:col-span-9 mt-8">
