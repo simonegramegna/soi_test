@@ -44,6 +44,7 @@ export const SoiTestContainer = () => {
             session.consult('/prolog/compiled.pl', {
                 success: function() {
                     const goal = 'get_result(['+getFormattedAnswers()+'],['+Object.keys(tests_seq)+'],Score).'
+                    console.log(goal)
                     session.query(goal, {
                         success: function(goal) {
                             session.answer({
@@ -91,7 +92,7 @@ export const SoiTestContainer = () => {
             string += '['
             if (k !== 'msu' && k !== 'mss') {
                 allAnswers[k].forEach((a,i) => {
-                    string += a === '' ? 0 : a
+                    string += a === '' ? 0 : a.split('-').join('')
                     string += (i === allAnswers[k].length - 1 ? '' : ',')
                 })                    
             } else {

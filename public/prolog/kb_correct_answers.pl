@@ -118,12 +118,12 @@ correct_answer(efu, 7, 3).
 
 
 % module NST First Level
-correct_answer(nst, 1, '13-14-15').
-correct_answer(nst, 2, '08-09-10').
-correct_answer(nst, 3, '10-11-12-13').
-correct_answer(nst, 4, '09-10-11-12').
-correct_answer(nst, 5, '20-21-22-23').
-correct_answer(nst, 6, '18-19-20-21').
+correct_answer(nst, 1, 131415).
+correct_answer(nst, 2, 080910).
+correct_answer(nst, 3, 10111213).
+correct_answer(nst, 4, 09101112).
+correct_answer(nst, 5, 20212223).
+correct_answer(nst, 6, 18192021).
 
 
 % module MSU
