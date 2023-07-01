@@ -25,13 +25,13 @@ export const SoiTestSelector = () => {
             </h2>
         </div>
         <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-3 sm:col-span-12 xl:col-span-3 intro-y"></div>
-            <div className="col-span-6 sm:col-span-12 xl:col-span-6 intro-y">
+            <div className="col-span-12 sm:col-span-12 xl:col-span-3 intro-y"></div>
+            <div className="col-span-12 sm:col-span-12 xl:col-span-6 intro-y">
                 <div className="p-3">
                     <img width='500' src='/images/soi-cube.svg' alt='SOI Cube' className='w-full' />
                 </div>
             </div>
-            <div className="col-span-3 sm:col-span-12 xl:col-span-3 intro-y"></div>
+            <div className="col-span-12 sm:col-span-12 xl:col-span-3 intro-y"></div>
         </div>
         <div className="grid grid-cols-12 gap-6 mt-5">
             {

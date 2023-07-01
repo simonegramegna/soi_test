@@ -52,8 +52,8 @@ export const SoiTestResult = () => {
                                 </li>
                             </ul>
                             <div className="tab-content px-5 pb-5">
-                                <div className="tab-pane grid grid-cols-12 gap-y-8 gap-x-10 active">
-                                    <div className="col-span-6 sm:col-span-6">
+                                <div className="tab-pane grid grid-cols-12 active">
+                                    <div className="col-span-12 sm:col-span-12 xl:col-span-6 p-3">
                                         <div className="justify-center flex items-center text-slate-600 mt-12"> Soi ability tested: </div>
                                         <div className="justify-center flex items-center mt-4">
                                             <div className="relative text-4xl font-bold pl-3 ml-0.5 uppercase">{result.test_id.split('_').join(' ')}</div>
@@ -67,7 +67,7 @@ export const SoiTestResult = () => {
                                             <div className="relative text-4xl font-bold pl-3 ml-0.5 uppercase">{result.avg}</div>
                                         </div>
                                     </div>
-                                    <div className="col-span-6 sm:col-span-6">
+                                    <div className="col-span-12 sm:col-span-12 xl:col-span-6 p-3">
                                         <div className="justify-center flex items-center text-slate-600 mt-12">
                                             <img width='500' src='/images/soi-cube.svg' alt='SOI Cube' className='w-full' />
                                         </div>
