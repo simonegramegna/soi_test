@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getResult, setResult } from "../../features/soiSlice"
 import { NavLink } from "react-router-dom"
+import { RefreshCcw } from "react-feather"
 
 export const SoiTestResult = () => {
 
@@ -38,6 +39,7 @@ export const SoiTestResult = () => {
                 <h2 className="text-lg font-medium truncate mr-5">
                     Test Report
                 </h2>
+                <NavLink to={'/start-test'} className='ml-auto flex items-center text-primary btn btn-outline-primary'><RefreshCcw className="w-4 h-4 mr-3" /> Start new test</NavLink>
             </div>
             <div className="report-box-2 intro-y mt-5">
                 <div className="box grid grid-cols-12">
@@ -58,7 +60,7 @@ export const SoiTestResult = () => {
                                         </div>
                                         <div className="justify-center flex items-center text-slate-600 mt-12"> Your total Score is: </div>
                                         <div className="justify-center flex items-center mt-4">
-                                            <div className="relative text-4xl font-bold pl-3 ml-0.5">{result.score}</div>
+                                            <div className="relative text-4xl font-bold pl-3 ml-0.5">{Math.round(result.score * 1000) / 1000}</div>
                                         </div>
                                         <div className="justify-center flex items-center text-slate-600 mt-12"> With respect to the average your Ability is: </div>
                                         <div className={'justify-center flex items-center mt-4 alert '+(result.avg === 'strength' ? 'alert-success' : (result.avg === 'weakness' ? 'alert-danger' : 'alert-warning'))+' show'}>

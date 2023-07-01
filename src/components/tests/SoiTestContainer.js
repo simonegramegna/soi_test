@@ -92,7 +92,7 @@ export const SoiTestContainer = () => {
             string += '['
             if (k !== 'msu' && k !== 'mss') {
                 allAnswers[k].forEach((a,i) => {
-                    string += a === '' ? 0 : a.split('-').join('')
+                    string += a === '' ? 0 : a.split('-').join('').replace(/\s/g, '')
                     string += (i === allAnswers[k].length - 1 ? '' : ',')
                 })                    
             } else {

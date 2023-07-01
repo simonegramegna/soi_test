@@ -1207,7 +1207,7 @@ correct_answer(cfu, 2, 'chickie').
 correct_answer(cfu, 2, 'chick').
 correct_answer(cfu, 3, 'duck').
 correct_answer(cfu, 3, 'duckling').
-correct_answer(cfu, 3, 'drake duck').
+correct_answer(cfu, 3, 'drakeduck').
 correct_answer(cfu, 3, 'gosling').
 correct_answer(cfu, 4, 'cup').
 correct_answer(cfu, 4, 'bowl').
@@ -1236,7 +1236,7 @@ correct_answer(cfu, 11, 'banana').
 correct_answer(cfu, 11, 'bananas').
 correct_answer(cfu, 11, 'plantain').
 correct_answer(cfu, 11, 'plantains').
-correct_answer(cfu, 12, 'slice of bread').
+correct_answer(cfu, 12, 'sliceofbread').
 correct_answer(cfu, 12, 'bread').
 correct_answer(cfu, 12, 'toast').
 correct_answer(cfu, 13, 'switch').
@@ -1244,7 +1244,7 @@ correct_answer(cfu, 13, 'breaker').
 correct_answer(cfu, 13, 'jack').
 correct_answer(cfu, 13, 'socket').
 correct_answer(cfu, 14, 'iron').
-correct_answer(cfu, 14, 'steam iron').
+correct_answer(cfu, 14, 'steamiron').
 correct_answer(cfu, 15, 'pumpkin').
 correct_answer(cfu, 15, 'squash').
 correct_answer(cfu, 15, 'gourd').
